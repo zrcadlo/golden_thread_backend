@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151110030951) do
+ActiveRecord::Schema.define(version: 20151110033913) do
 
   create_table "lessons", force: :cascade do |t|
     t.string   "title",      limit: 255
@@ -19,6 +19,13 @@ ActiveRecord::Schema.define(version: 20151110030951) do
     t.boolean  "is_active"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
+  end
+
+  create_table "slides", force: :cascade do |t|
+    t.text     "content",    limit: 65535
+    t.boolean  "is_active"
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
 end
