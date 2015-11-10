@@ -14,7 +14,7 @@ class SlidesController < ApplicationController
 
   # GET /slides/new
   def new
-    @slide = Slide.new
+    @slide = Slide.new(lesson_id: params[:lesson_id])
   end
 
   # GET /slides/1/edit
@@ -69,6 +69,6 @@ class SlidesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def slide_params
-      params.require(:slide).permit(:content, :is_active)
+      params.require(:slide).permit(:content, :is_active, :lesson_id)
     end
 end

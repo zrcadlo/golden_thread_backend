@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151110033913) do
+ActiveRecord::Schema.define(version: 20151110035325) do
 
   create_table "lessons", force: :cascade do |t|
     t.string   "title",      limit: 255
@@ -26,6 +26,9 @@ ActiveRecord::Schema.define(version: 20151110033913) do
     t.boolean  "is_active"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
+    t.integer  "lesson_id",  limit: 4
   end
+
+  add_index "slides", ["lesson_id"], name: "index_slides_on_lesson_id", using: :btree
 
 end

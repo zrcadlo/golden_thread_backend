@@ -8,6 +8,8 @@
   <dd><%= @slide.content %></dd>
   <dt><strong><%= model_class.human_attribute_name(:is_active) %>:</strong></dt>
   <dd><%= @slide.is_active %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:lesson_id) %>:</strong></dt>
+  <dd><%= link_to @slide.lesson.title, lesson_path(id: @slide.lesson.id) %></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),

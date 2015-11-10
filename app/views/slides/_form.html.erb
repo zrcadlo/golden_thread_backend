@@ -29,6 +29,13 @@
     </div>
     <%= error_span(@slide[:is_active]) %>
   </div>
+  <div class="control-group">
+    <%= f.label :lesson_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.collection_select :lesson_id, Lesson.all, :id, :title, :class => 'form-control' %>
+    </div>
+    <%= error_span(@slide[:lesson_id]) %>
+  </div>
 
 
   <%= f.submit nil, :class => 'btn btn-primary' %>
