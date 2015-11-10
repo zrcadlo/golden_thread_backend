@@ -23,13 +23,6 @@
     <%= error_span(@slide[:content]) %>
   </div>
   <div class="control-group">
-    <%= f.label :is_active, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :is_active, :class => 'form-control' %>
-    </div>
-    <%= error_span(@slide[:is_active]) %>
-  </div>
-  <div class="control-group">
     <%= f.label :lesson_id, :class => 'control-label' %>
     <div class="controls">
       <%= f.collection_select :lesson_id, Lesson.all, :id, :title, :class => 'form-control' %>

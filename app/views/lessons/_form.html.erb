@@ -22,20 +22,6 @@
     </div>
     <%= error_span(@lesson[:title]) %>
   </div>
-  <div class="control-group">
-    <%= f.label :position, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :position, :class => 'form-control' %>
-    </div>
-    <%= error_span(@lesson[:position]) %>
-  </div>
-  <div class="control-group">
-    <%= f.label :is_active, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :is_active, :class => 'form-control' %>
-    </div>
-    <%= error_span(@lesson[:is_active]) %>
-  </div>
 
 
   <%= f.submit nil, :class => 'btn btn-primary' %>

@@ -1,1 +1,1 @@
-json.extract! @lesson, :id, :title, :position, :is_active, :created_at, :updated_at
+json.extract! @lesson, :id, :title, :created_at, :updated_at

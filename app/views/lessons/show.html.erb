@@ -6,10 +6,6 @@
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
   <dd><%= @lesson.title %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:position) %>:</strong></dt>
-  <dd><%= @lesson.position %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:is_active) %>:</strong></dt>
-  <dd><%= @lesson.is_active %></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
@@ -28,7 +24,6 @@
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:content) %></th>
-      <th><%= model_class.human_attribute_name(:is_active) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -38,7 +33,6 @@
       <tr>
         <td><%= link_to slide.id, slide_path(slide) %></td>
         <td><%= slide.content %></td>
-        <td><%= slide.is_active %></td>
         <td><%=l slide.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
